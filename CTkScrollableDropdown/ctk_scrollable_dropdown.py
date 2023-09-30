@@ -254,7 +254,6 @@ class CTkScrollableDropdown(customtkinter.CTkToplevel):
                 s = self.widgets[key].cget("text").lower()
                 text_similarity = difflib.SequenceMatcher(None, s[0:len(string)], string).ratio()
                 similar = string in s or text_similarity > 0.75
-                print(s)
                 if not similar:
                     self.widgets[key].pack_forget()
                 else:
